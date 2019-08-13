@@ -1,16 +1,8 @@
 from django.http import HttpResponse
 
+from django.shortcuts import render
 
-#method view
-
+# Create your views here.
 def index(request):
-	judul = "<h1>Halaman Home"
-	subjudul = "<h2>Selamat datang di mywebsite<h2>"
-	output = judul + subjudul
-	return HttpResponse(output)
+	return render(request,'index.html')
 
-def blog(request):
-	return HttpResponse("Halaman Blog")
-
-def about(request):
-	return HttpResponse("Halaman About")
