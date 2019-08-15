@@ -4,5 +4,9 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-	return render(request,'index.html')
+	context = {
+		'judul':'My Django App',
+		'kontributor' : 'Mukhlis',
+	}
+	return render(request,'index.html',context)
 
